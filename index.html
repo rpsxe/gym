@@ -1,333 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Gym Academy</title>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="_css/style.css">
-<style>*{
-			padding: 0;
-			margin: 0;
-		}
-		body{
-			font-family: 'PT Sans', sans-serif;
-		}
-		header{
-			max-height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		header img{
-			width: 100%;
-			max-height: 100vh;
-			object-fit: cover;
-			filter: grayscale(1);
-		}
+	<link rel="stylesheet" href="https://rpsxe.github.io/gym/_css/style.css">
 
-		header .title{
-			width: auto;
-			color: white;
-			position: absolute;
-			text-align: center;
-			border: 2px solid white;
-			padding: 40px;
-
-		}
-		header .title h1{
-			font-size: 70px;
-			line-height: 84px;
-			letter-spacing: .2em;
-		}
-		header .title h2,h3{
-			font-family: 'Satisfy', cursive;
-			color: #fcff18;
-			font-weight: 400;
-		}
-		header .btnEntrar{
-			font-family: 'PT Sans', sans-serif;
-			position: absolute;
-			bottom: 120px;
-			padding: 20px;
-			background-color: #fcff18;
-			transition: all 0.5s;
-		}
-		header .btnEntrar a{
-			text-decoration: none;
-			color: black;
-			font-weight: 900;
-		}
-
-		.bloc_1{
-			padding: 40px;
-			margin: 40px;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			color: #353535;
-		}
-		.bloc_1 .row{
-			display: flex;
-			flex-direction: row;
-		}
-		.bloc_1 h1{
-			font-size: 48px;
-			margin: 40px;
-		}
-		.bloc_1 .card{
-			width: 350px;
-			padding: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-		}
-		.bloc_1 .card .ico{
-			background-color: #eee;
-			border-radius: 50%;
-			height: 100px;
-			width: 100px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.5s;
-			margin: 20px;
-		}
-		.bloc_1 .card .ico img{
-			max-width: 50px;
-		}
-		.bloc_1 .card .ico:hover{
-			background-color: #fcff18;
-		}
-		.bloc_2{
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-		}
-		.bloc_2 .bloc_2_options{
-			display: flex;
-			flex-direction: column;
-		}
-		.bloc_2 .bloc_2_options .bloc_2_list{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			margin-left: 25px;
-		}
-		.bloc_2 .bloc_2_btn{
-			width: 80px;
-			padding: 20px;
-			margin: 20px;
-			border-radius: 15px;
-			color: black;
-			background-color: #fcff18;
-			transition: all 0.5s;
-		}
-		.bloc_2 .bloc_2_options .bloc_2_list p{
-			margin-left: 10px;
-		}
-		.bloc_2 .bloc_2_options .bloc_2_list .bloc_2_ico{
-			background-color: #fcff18;
-			border-radius: 50%;
-			height: 32px;
-			width: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.5s;
-			margin: 5px;
-		}
-		.bloc_2 .bloc_2_options .bloc_2_list .bloc_2_ico img{
-			width: 20px;
-			height: 20px;
-		}
-		.bloc_2 img{
-			width: 100%;
-			height: 100vh;
-			object-fit: cover;
-			filter: grayscale(1);
-		}
-		.bloc_2 .bloc_2_card{
-			background-color: black;
-			color: white;
-			width: 600px;
-			padding: 30px;
-			position: absolute;
-		}
-		.bloc_2 .bloc_2_card h1{
-			font-size: 60px;
-			margin: 30px;
-		}
-		.bloc_3{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: row;
-			padding: 40px;
-		}
-		.bloc_3 .bloc_3_item{
-			padding: 30px;
-			margin: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			flex-direction: column;
-			color: black;
-		}
-		.bloc_3 .bloc_3_number{
-			background-color: #fcff18;
-			padding: 20px;
-			border-radius: 15px;
-		}
-		.bloc_3 .bloc_3_number h1{
-			font-size: 36px;
-		}
-		.bloc_4{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			padding: 40px;
-			color: #353535;
-		}
-		.bloc_4 h1{
-			font-size: 48px;
-		}
-		.bloc_4 .bloc_4_personal{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: row;
-		}
-		.bloc_4 .bloc_4_personal .bloc_4_item{
-			padding: 40px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-		}
-		.bloc_4 .bloc_4_personal .bloc_4_item h1{
-			font-size: 32px;
-		}
-		.bloc_4 .bloc_4_personal .bloc_4_item img{
-			border-radius: 50%;
-		}
-		.bloc_5{
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			overflow: hidden;
-			color: black;
-		}
-		.bloc_5 img{
-			width: 100%;
-			height: 100vh;
-			object-fit: cover;
-			filter: grayscale(1);
-		}
-		.bloc_5 .bloc_5_info{
-			max-height: 100vh;
-			background-color: #f6f9fa;
-			width: 600px;
-			padding: 30px;
-			position: absolute;
-		}
-		.bloc_5 .bloc_5_imc input{
-			border: none;
-			padding: 20px;
-			width:40%;
-			margin: 10px;
-			outline: 0;
-		}
-		.bloc_5 .bloc_5_imc{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: row;
-		}
-		.bloc_5 .bloc_5_btn{
-			width: 80px;
-			border-radius: 15px;
-			text-align: center;
-			padding: 20px;
-			margin: 20px;
-			color: black;
-			background-color: #fcff18;
-			transition: all 0.5s;
-		}
-		.bloc_6{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: row;
-			padding: 100px;
-		}
-		.bloc_6 .bloc_6_mail input{
-			width: 400px;
-			margin-left: 30px;
-			height: 20px;
-			border: none;
-			padding: 20px;
-			border: 1px solid #fcff18;
-			outline: 0;
-		}
-		.bloc_6 .bloc_6_btn{
-			width: 80px;
-			height: 20px;
-			border-radius: 0 15px 15px 0;
-			text-align: center;
-			padding: 20px;
-			color: black;
-			background-color: #fcff18;
-			transition: all 0.5s;
-			border: 1px solid #fcff18;
-		}
-		footer{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			
-		}
-		footer img{
-			width: 100%;
-			height: 60vh;
-			object-fit: cover;
-			filter: grayscale(1);
-			opacity: .3;
-		}
-		footer .footer{
-			opacity: 1;
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: row;
-		}
-		footer .footer .footer_item{
-			padding: 30px;
-			margin: 20px;
-			text-align: center;
-		}
-		footer .footer .footer_item img{
-			opacity: 1;
-			width: 30px;
-			height: 30px;
-		}
-		footer .footer .footer_midias img{
-			width: 20px;
-			height: 20px;
-		}</style>
 	
 </head>
 <body>
 	<header>
-		<img src="_img/2.webp" alt="">	
+		<img src="https://rpsxe.github.io/gym/_img/2.webp" alt="">	
 		<div class="title">
 			<h1>GYM ACADEMY</h1>
 			<h3>light weight baby</h3>
@@ -378,7 +62,7 @@
 		</div>
 	</main>
 	<main class="bloc_2">
-		<img src="_img/1.webp" alt="">
+		<img src="https://rpsxe.github.io/gym/_img/1.webp" alt="">
 		<div class="bloc_2_card">
 			<h1>Pague agora e tenha <br>um <span style="color: #fcff18;">desconto</span> de 25%</h1>
 			<div class="bloc_2_options">
@@ -469,7 +153,7 @@
 		</div>
 	</main>
 	<main class="bloc_5">
-		<img src="_img/4.webp" alt="">
+		<img src="https://rpsxe.github.io/gym/_img/4.webp" alt="">
 		<div class="bloc_5_info">
 			<h1 style="text-align: center;">
 				<img src="https://image.flaticon.com/icons/svg/2843/2843696.svg" alt="" style="height: 80px; width: 80px"><br>
@@ -495,7 +179,7 @@
 			<div class="bloc_6_btn">Receber</div>
 		</main>
 		<footer>
-			<img src="_img/3.webp" alt="">
+			<img src="https://rpsxe.github.io/gym/_img/3.webp" alt="">
 			<div class="footer">
 				<div class="footer_item">
 					<h2>
