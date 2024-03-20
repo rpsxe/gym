@@ -207,6 +207,7 @@
 		}
 		.bloc_4 .bloc_4_personal .bloc_4_item img{
 			border-radius: 50%;
+			max-height: 200px;
 		}
 		.bloc_5{
 			height: 100vh;
